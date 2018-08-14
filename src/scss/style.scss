@@ -1,0 +1,248 @@
+@font-face {
+    font-family: 'globerbold';
+    src: url(../assets/fonts/Glober_Bold.otf) format('otf');
+  }
+ @font-face {
+    font-family: 'globersemibold';
+    src: url(../assets/fonts/Glober_SemiBold.otf) format('otf');
+  }
+
+$bg-color: #ffffff;
+$font-main: 'globerbold', sans-serif;
+$font-custom: 'globersemibold', sans-serif;
+$link-color: #008ba4;
+$header: #000000;
+$tap: #54b8cd;
+$enable-shadows: true;
+$box-shadows: -1px 0px 13px 0px rgba(100,100,100,0.75) !important;
+
+
+.shadow {
+    box-shadow: $box-shadows;
+}
+
+body {
+    background: $bg-color;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    color: $link-color;
+}
+
+h1 {
+    color: $header;
+    font-size: 1.5em;
+    padding-left: 10px;
+
+    span {
+        color: $tap;
+    }
+}
+
+h2 {
+    font-size: 1.56em;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+h3 {
+    font-size: 1.1em;
+    font-weight: 500;
+    color: $link-color;
+    margin-bottom: 0;
+    font-family: $font-custom;
+}
+
+div span img {
+    padding-left: 10px;
+    margin-right: 5px;
+}
+
+.img-valign {
+    vertical-align: middle;
+    margin-bottom: 0.5em;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+  div:nth-child(2)  p {    
+      margin-bottom: 0.0rem;   
+    }
+  
+  span:nth-child(1) {
+      font-weight: bold;
+      font-size: 1.4em;
+      letter-spacing: 0px;
+      word-spacing: -3px;    
+}
+
+  p span:nth-child(2) {
+    font-weight: bold;
+    font-size: 1.4em;
+    letter-spacing: 0px;
+    word-spacing: -3px;
+    color: #54b8cd;       
+}
+  
+  .talk {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .video p {
+      font-size: 1.3em;
+      line-height: 1.25em;
+      font-weight: 400;
+      padding: 15px 0 15px 0;
+  }
+
+  .remove-padding {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+
+  .percentage-off-bg {
+    position: absolute;
+    right: -35px;
+    top: -45px;
+    background: url(../assets/percentage.png) center;
+    background-repeat: no-repeat;
+    width: 84px;
+    height: 84px;
+    padding: 25px 0;
+    color: #ffffff;
+    font-weight: 700;
+
+        .percent {
+            color: #ffffff;
+            display: block;
+            font-size: 1.375em;
+            line-height: .85em;;       
+        }
+    }
+
+  .currency:before {
+    content: '\0024';
+    font-size: .7em;
+    font-family: $font-main;
+    vertical-align: super;
+   }
+
+   .usd:after {
+    content: "usd";
+    display: inline-block;
+    font-size: .50em;
+    font-family: $font-main;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-left: 2px;
+    text-decoration: underline;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    }
+
+    .amount {
+        font-size: 1.5em;
+        font-family: $font-main;
+    }
+
+        .price-underline {
+            font-family: $font-custom;
+            font-size: .85em;
+
+            span {
+                background: url(../assets/price-highlight.png) center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                display: block;
+            }
+        }
+
+        .atc-btn {
+            width: 82%;
+            color: #fff;
+            background-color: #40ad4a;
+            padding-left: 50px;
+            border-color: #358f3d;
+            -webkit-box-shadow: 0 8px 0 #358f3d, 0 8px 6px rgba(0,0,0,0.35);
+            box-shadow: 0 8px 0 #358f3d, 0 8px 6px rgba(0,0,0,0.35);
+            text-shadow: 0 -1px 1px rgba(41,41,44,0.35);            
+        }
+
+        .atc-btn:after {
+            content: '\25BA';
+            line-height: 1;
+            margin: 0 -.5em 0 .5em;
+            position: relative;
+            right: auto;
+        }
+
+        .seal-img {
+            position: absolute;
+            left: 30px;
+        }
+        
+        .blue-bg {
+            margin-top: 0px;
+            padding: 4px 10px 10px 10px;
+            background-color: #008ba4;
+            margin-bottom: 0px;
+            text-align: center !important;
+                .blue-header {
+                    color: #ffffff;
+                    font-size: .95em; 
+                    letter-spacing: 2px;    
+                }
+        }
+
+        .green-bg {
+            background-color: green;
+            padding: 20px 20px 20px 20px;
+        }
+        .wp-image-62567 {
+            max-width: 100%;
+            height: auto;
+        }
+
+
+
+
+
+
+
+
+
+
+
+        
+          /* Supplement facts */
+          .supplement-facts {
+            color: #000;
+            border: 3px solid;
+            padding: 6px;
+            max-width: 445px;
+            display: block;
+            margin: auto;
+            font-size: small;
+            line-height: 1.4;
+            font-weight: 700;
+        }
+        .supplement-facts table {
+            border: none;
+            color: #000;
+            font-size: 18px;
+        }
+        .supplement-facts thead tr td {
+            border-bottom: 16px solid;
+        }
+        .supplement-facts .amount-per-serving th {
+            text-align: left;
+            font-weight: 300;
+            border-bottom: 8px solid;
+            border-collapse: collapse;
+            padding: 0;
+        }
+        .supplement-facts .extra-info td {
+            border-top: 16px solid;
+        }
