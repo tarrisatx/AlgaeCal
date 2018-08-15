@@ -1,326 +1,415 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-    <head>
-        <title>AlgaeCal Test</title>
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,800">
-        <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="/css/bootstrap.css">
-        <link rel="stylesheet" href="/css/style.css">
-        
-    </head>
 
-    <body>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <img src="assets/logo.jpg" class="img-fluid" />
-                    </div>
-                    <div class="col-md-6">
-                            <p><span>Tap to Talk</span> <span id="phoneNum"></span></p>
-                            <div id="available"><img src="assets/phone-icon.png" class="img-valign" /><span class="talk">Speak to our Bone Health Specialists!</span></div>
-                    </div>
+<head>
+    <title>AlgaeCal Test</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,800">
+    <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <img src="assets/logo.jpg" class="img-fluid" />
+            </div>
+            <div class="col-sm-6">
+                <p>
+                    <span>Tap to Talk</span>
+                    <span id="phoneNum"></span>
+                </p>
+                <div id="available">
+                    <img src="assets/phone-icon.png" class="img-valign" />
+                    <span class="talk">Speak to our Bone Health Specialists!</span>
                 </div>
+            </div>
+        </div>
 
-                <div class="row">
-                    <div class="col-md-6 remove-padding">
-                            <img src="assets/green-bg.png" class="img-fluid">
-                    </div>
-                    <div class="col-md-6 video">
-                            <p>Build <strong>brand new bone</strong> WITHIN 6<br> MONTHS with this <strong>rare algae</strong> calcium<br>
-                            ...even if you're 85!</p>
-                        <div class="video-container">
-                                <script src="//fast.wistia.com/embed/medias/cecdwaq3dz.jsonp" async></script>
-                                <script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
-                                <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
-                                    <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
-                                        <div class="wistia_embed wistia_async_cecdwaq3dz videoFoam=true " style="height:100%;width:100%">
-                                            &nbsp;
-                                        </div>
-                                        <script>
-                                                window._wq = window._wq || [];
-                                                
-                                                // target our video by the first 3 characters of the hashed ID
-                                                _wq.push({ id: "cecdwaq3dz", onReady: function(video) {
-                                                  // at 133 seconds, show boxes
-                                                  video.bind('secondchange', function(s) {
-                                                    if (s === 10) {
-                                                      // Insert code to do something amazing here
-                                                      console.log("We just reached " + s + " seconds!");
-                                                      document.getElementById('promos').style.display = "";
-                                                    }
-                                                  });
-                                                }});
-                                                
-                                        </script>                                  
-                                    </div>
-                                </div>
+        <div class="row">
+            <div class="col-sm-6 remove-padding">
+                <img src="assets/green-bg.png" class="img-fluid">
+            </div>
+            <div class="col-sm-6 video">
+                <p>Build
+                    <strong>brand new bone</strong> WITHIN 6
+                    <br> MONTHS with this
+                    <strong>rare algae</strong> calcium
+                    <br> ...even if you're 85!</p>
+                <div class="video-container">
+                    <script src="//fast.wistia.com/embed/medias/cecdwaq3dz.jsonp" async></script>
+                    <script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+                    <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
+                        <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+                            <div class="wistia_embed wistia_async_cecdwaq3dz videoFoam=true " style="height:100%;width:100%">
+                                &nbsp;
+                            </div>
+                            <script>                              
+                                window._wq = window._wq || [];
+                                _wq.push({
+                                    id: "cecdwaq3dz", onReady: function (video) {
+                                        video.bind("betweentimes", 133, 1035, function(withinInterval) {
+                                            if (withinInterval) {
+                                                    showMyElement();
+                                                } else {
+                                                    hideMyElement();
+                                                }
+                                        });
+                                    }
+                                });
+                            </script>
                         </div>
                     </div>
                 </div>
-
-                <div id="promos" class="row">
-                    <div class="col-sm-4 mt-5 ml-4 mr-4">
-                            <div class="card mb-4 rounded-0 shadow">
-                                    <div class="card-header bg-transparent text-center border-0">
-                                        <div class="percentage-off-bg"><span class="percent">20%</span>OFF</div>
-                                        <h2>3 Month Supply</h2>
-                                        <h3>4 AlgaeCal Plus</h3>
-                                        <h3>3 Strontium Boost</h3>
-                                    </div>
-                                    <div class="card-body text-center">
-                                      <img src="assets/3-month-supply.png" class="img-fluid" alt="3 month supply bottle">
-                                      <div class="amount">
-                                          <span class="currency">233</span>
-                                          <span class="usd"></span>
-                                        </div>
-                                      <div class="price-underline">
-                                          <span>Only $2.58/Day!</span>
-                                        </div>
-                                        <div class="mb-3">
-                                            <img src="assets/seal.png" class="seal-img img-fluid" alt="7 year guarantee seal">
-                                            <button class="btn atc-btn mt-3">Add to Cart</button>
-                                        </div>
-                                    </div>
-                                  </div>
-                    </div>
-
-                <div class="col-sm-4 mt-5 ml-4 mr-4">
-                            
-                    <div class="blue-bg">
-                        <div class="blue-header">MOST POPULAR</div>
-                        <div class="card rounded-0 shadow">
-                                    <div class="card-header bg-transparent text-center border-0">
-                                        <div class="percentage-off-bg"><span class="percent">35%</span>OFF</div>
-                                        <h2>6 Month Supply</h2>
-                                        <h3>8 AlgaeCal Plus</h3>
-                                        <h3>6 Strontium Boost</h3>
-                                    </div>
-                                    <div class="card-body text-center">
-                                      <img src="assets/6-month-supply.png" class="img-fluid" alt="3 month supply bottle">
-                                      <div class="amount">
-                                          <span class="currency">337</span>
-                                          <span class="usd"></span>
-                                        </div>
-                                      <div class="price-underline">
-                                          <span>Only $2.09/Day!</span>
-                                        </div>
-                                        <div class="mb-3">
-                                            <img src="assets/seal.png" class="seal-img img-fluid" alt="7 year guarantee seal">
-                                            <button class="btn atc-btn mt-3">Add to Cart</button>
-                                        </div>
-                                    </div>
-                                  </div>
-                    </div>
-                </div>
-                    <div class="col-sm-4 mt-5 ml-4 mr-4">
-                            <div class="card mb-4 rounded-0 shadow">
-                                    <div class="card-header bg-transparent text-center border-0">
-                                        <div class="percentage-off-bg"><span class="percent">38%</span>OFF</div>
-                                        <h2>12 Month Supply</h2>
-                                        <h3>16 AlgaeCal Plus</h3>
-                                        <h3>12 Strontium Boost</h3>
-                                    </div>
-                                    <div class="card-body text-center">
-                                      <img src="assets/12-month-supply.png" class="img-fluid" alt="3 month supply bottle">
-                                      <div class="amount">
-                                          <span class="currency">717</span>
-                                          <span class="usd"></span>
-                                        </div>
-                                      <div class="price-underline">
-                                          <span>Only $1.97/Day!</span>
-                                        </div>
-                                        <div class="mb-3">
-                                            <img src="assets/seal.png" class="seal-img img-fluid" alt="7 year guarantee seal">
-                                            <button class="btn atc-btn mt-3">Add to Cart</button>
-                                        </div>
-                                    </div>
-                                  </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-sm-4">
-                    <h2 class="text-center">AlgaeCal Plus</h2>
-                    <!--Begin table 1 -->
-                    <div class="supplement-facts">
-                            <table class="algaecal-plus" style="width:100%">
-                            <thead>
-                            <tr>
-                            <td colspan="2">
-                            <h2 class="text-center">Supplement Facts</h2>
-                            <p><span class="servings">4 Capsules Per Day<br>
-                            Servings Per Container: 22<br>
-                            </span></p></td>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr class="amount-per-serving">
-                            <th colspan="2">Amount Per Serving <span class="float-right">%DV</span></th>
-                            </tr>
-                            <tr>
-                            <td>Vitamin C <strong>50mg</strong><br><small>(as calcium ascorbate)</small></td>
-                            <td class="daily-values">84%</td>
-                            </tr>
-                            <tr>
-                            <td>Vitamin D3 <strong>1600 IU</strong> <br><small>(as cholecalciferol)</small></td>
-                            <td class="daily-values">400%</td>
-                            </tr>
-                            <tr>
-                            <td>Vitamin K2 <strong>100 mcg</strong><br><small>(as menaquinone-7)</small></td>
-                            <td class="daily-values">126%</td>
-                            </tr>
-                            <tr>
-                            <td>Calcium <strong>720 mg</strong><br><small>(from algas calcareas)</small></td>
-                            <td class="daily-values">72%</td>
-                            </tr>
-                            <tr>
-                            <td>Magnesium <strong>350 mg</strong><br><small>(from algas calcareas and magnesium oxide)</small></td>
-                            <td class="daily-values">88%</td>
-                            </tr>
-                            <tr class="extra-info">
-                            <td colspan="2"></td>
-                            </tr>
-                            <tr>
-                            <td>Boron <strong>3.0 mg</strong>*<br><small>(as glycinate)</small></td>
-                            <td class="daily-values"></td>
-                            </tr>
-                            <tr class="extra-info">
-                            <td colspan="2"><small>*Daily Value (DV) not established</small></td>
-                            </tr>
-                            
-                            </tbody>
-                            </table>
-                            </div>
-                    <!--End table 1 -->
-                    </div>
-                   
-
-
-
-
-
-
-
-
-
-                    <div class="col-sm-4">
-                            <h2 class="text-center">Strontium Boost</h2>
-                            <!--Begin table 2 -->
-                            <div class="supplement-facts">
-                                    <table class="algaecal-plus" style="width:100%">
-                                    <thead>
-                                    <tr>
-                                    <td colspan="2">
-                                    <h2 class="text-center">Supplement Facts</h2>
-                                    <p><span class="servings">2 Capsules Per Day<br>
-                                    Servings Per Container: 30<br>
-                                    </span></p></td>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr class="amount-per-serving">
-                                    <th colspan="2">Amount Per Serving <span class="float-right">%DV</span></th>
-                                    </tr>
-                                    <tr>
-                                    <td>Strontium <br><small>(from Strontium Citrate)</small></td>
-                                    <td class="daily-values">680 mg*</td>
-                                    </tr>
-                                    
-                                    
-                                    
-                                    
-                                    <tr class="extra-info">
-                                    <td colspan="2"></td>
-                                    </tr>
-                                    
-                                    <tr class="extra-info">
-                                    <td colspan="2"><small>*Daily Value (DV) not established</small></td>
-                                    </tr>
-                                    
-                                    </tbody>
-                                    </table>
-                                    </div>
-                            <!--End table 2 -->
-                            </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                        <!--7 year guarantee section-->
-                        <div class="col-sm-4 mt-5">
-                            
-                                <div class="green-bg">
-                                    <div class="card rounded-0 shadow">
-                                                <div class="card-header bg-transparent text-center border-0">
-                                                    <img src="assets/seal_large.png" alt="7 year guarantee seal" class="img-fluid">
-                                                    <h2 id="title"></h2>
-                                                </div>
-                                                <div class="card-body text-left">
-                                                  <div>When you follow directions for use of AlgaeCal Plus and Strontium Boost – we guarantee you will see increased bone density in EVERY follow-up bone scan you have while using these 2 products - or we will refund every penny you paid for our products between your scans. This guarantee extends to every scan you have for the next 7 years. Also, if you are unsatisfied at anytime you can return my product for a full refund, no questions asked! 
-                                                      <a href="#" data-toggle="modal" data-target="#exampleModalLong">Click here for details</a></div>
-                                                
-                                                </div>
-                                                  
-                                                </div>
-                                              </div>
-                                </div>
-                            </div>
-
-                   
-
-
-                            <!--<div id="long"></div>-->
-                            <!-- Button trigger modal -->
-
-      
-      <!-- Modal -->
-      <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLongTitle">7 Year Guarantee</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
             </div>
-            <div id="long" class="modal-body">
-              
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-          </div>
         </div>
-      </div>
 
-
-
-
-
-
-
-
+        <div id="promos" class="row">
+            <div class="col-sm-4 mt-5 pl-5 pr-5 supply">
+                <div class="card mb-4 rounded-0 shadow">
+                    <div class="card-header bg-transparent text-center border-0">
+                        <div class="percentage-off-bg">
+                            <span class="percent">20%</span>OFF</div>
+                        <h2>3 Month Supply</h2>
+                        <h3>4 AlgaeCal Plus</h3>
+                        <h3>3 Strontium Boost</h3>
+                    </div>
+                    <div class="card-body text-center">
+                        <img src="assets/3-month-supply.png" class="img-fluid" alt="3 month supply bottle">
+                        <div class="amount">
+                            <span class="currency">233</span>
+                            <span class="usd"></span>
+                        </div>
+                        <div class="price-underline">
+                            <span>Only $2.58/Day!</span>
+                        </div>
+                        <div class="mb-3">
+                            <img src="assets/seal.png" class="seal-img img-fluid" alt="7 year guarantee seal">
+                            <button class="btn atc-btn mt-3">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
             </div>
 
+            <div class="col-sm-4 mt-5 pl-5 pr-5 supply">
+
+                <div class="blue-bg">
+                    <div class="blue-header">MOST POPULAR</div>
+                    <div class="card rounded-0 shadow">
+                        <div class="card-header bg-transparent text-center border-0">
+                            <div class="percentage-off-bg">
+                                <span class="percent">35%</span>OFF</div>
+                            <h2>6 Month Supply</h2>
+                            <h3>8 AlgaeCal Plus</h3>
+                            <h3>6 Strontium Boost</h3>
+                        </div>
+                        <div class="card-body text-center">
+                            <img src="assets/6-month-supply.png" class="img-fluid" alt="3 month supply bottle">
+                            <div class="amount">
+                                <span class="currency">337</span>
+                                <span class="usd"></span>
+                            </div>
+                            <div class="price-underline">
+                                <span>Only $2.09/Day!</span>
+                            </div>
+                            <div class="mb-3">
+                                <img src="assets/seal.png" class="seal-img img-fluid" alt="7 year guarantee seal">
+                                <button class="btn atc-btn mt-3">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 mt-5 pl-5 pr-5 supply">
+                <div class="card mb-4 rounded-0 shadow">
+                    <div class="card-header bg-transparent text-center border-0">
+                        <div class="percentage-off-bg">
+                            <span class="percent">38%</span>OFF</div>
+                        <h2>12 Month Supply</h2>
+                        <h3>16 AlgaeCal Plus</h3>
+                        <h3>12 Strontium Boost</h3>
+                    </div>
+                    <div class="card-body text-center">
+                        <img src="assets/12-month-supply.png" class="img-fluid" alt="3 month supply bottle">
+                        <div class="amount">
+                            <span class="currency">717</span>
+                            <span class="usd"></span>
+                        </div>
+                        <div class="price-underline">
+                            <span>Only $1.97/Day!</span>
+                        </div>
+                        <div class="mb-3">
+                            <img src="assets/seal.png" class="seal-img img-fluid" alt="7 year guarantee seal">
+                            <button class="btn atc-btn mt-3">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4 order-md-12">
+                <h2 class="text-center mt-3 mb-3">AlgaeCal Plus</h2>
+                <!--Begin table 1 -->
+                <div class="supplement-facts">
+                    <table class="algaecal-plus" style="width:100%">
+                        <thead>
+                            <tr>
+                                <td colspan="2">
+                                    <h2 class="text-center">Supplement Facts</h2>
+                                    <p>
+                                        <span class="servings">4 Capsules Per Day
+                                            <br> Servings Per Container: 22
+                                            <br>
+                                        </span>
+                                    </p>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="amount-per-serving">
+                                <th colspan="2">Amount Per Serving
+                                    <span class="float-right">%DV</span>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>Vitamin C
+                                    <strong>50mg</strong>
+                                    <br>
+                                    <small>(as calcium ascorbate)</small>
+                                </td>
+                                <td class="daily-values">84%</td>
+                            </tr>
+                            <tr>
+                                <td>Vitamin D3
+                                    <strong>1600 IU</strong>
+                                    <br>
+                                    <small>(as cholecalciferol)</small>
+                                </td>
+                                <td class="daily-values">400%</td>
+                            </tr>
+                            <tr>
+                                <td>Vitamin K2
+                                    <strong>100 mcg</strong>
+                                    <br>
+                                    <small>(as menaquinone-7)</small>
+                                </td>
+                                <td class="daily-values">126%</td>
+                            </tr>
+                            <tr>
+                                <td>Calcium
+                                    <strong>720 mg</strong>
+                                    <br>
+                                    <small>(from algas calcareas)</small>
+                                </td>
+                                <td class="daily-values">72%</td>
+                            </tr>
+                            <tr>
+                                <td>Magnesium
+                                    <strong>350 mg</strong>
+                                    <br>
+                                    <small>(from algas calcareas and magnesium oxide)</small>
+                                </td>
+                                <td class="daily-values">88%</td>
+                            </tr>
+                            <tr class="extra-info">
+                                <td colspan="2"></td>
+                            </tr>
+                            <tr>
+                                <td>Boron
+                                    <strong>3.0 mg</strong>*
+                                    <br>
+                                    <small>(as glycinate)</small>
+                                </td>
+                                <td class="daily-values"></td>
+                            </tr>
+                            <tr class="extra-info">
+                                <td colspan="2">
+                                    <small>*Daily Value (DV) not established</small>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <!--End table 1 -->
+            </div>
+
+            <div class="col-sm-4 mb-3 order-sm-1">
+                <h2 class="text-center mt-3 mb-3">Strontium Boost</h2>
+                <!--Begin table 2 -->
+                <div class="supplement-facts">
+                    <table class="algaecal-plus" style="width:100%">
+                        <thead>
+                            <tr>
+                                <td colspan="2">
+                                    <h2 class="text-center">Supplement Facts</h2>
+                                    <p>
+                                        <span class="servings">2 Capsules Per Day
+                                            <br> Servings Per Container: 30
+                                            <br>
+                                        </span>
+                                    </p>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="amount-per-serving">
+                                <th colspan="2">Amount Per Serving
+                                    <span class="float-right">%DV</span>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>Strontium
+                                    <br>
+                                    <small>(from Strontium Citrate)</small>
+                                </td>
+                                <td class="daily-values">680 mg*</td>
+                            </tr>
+                            <tr class="extra-info">
+                                <td colspan="2">
+                                    <small>*Daily Value (DV) not established</small>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <!--End table 2 -->
+            </div>
+
+            <!--7 year guarantee section-->
+            <div class="col-md-12 col-sm-4">
+                <div class="green-bg">
+                    <div class="card rounded-0 shadow">
+                        <div class="card-header bg-transparent text-center border-0">
+                            <img src="https://www.algaecal.com/wp-content/uploads/Final_960px-e1478104202859.png" alt="7 year guarantee seal" class="img-fluid mb-4">
+                            <h2 id="title"></h2>
+                        </div>
+                        <div class="card-body text-left pt-0">
+                            <div>When you follow directions for use of AlgaeCal Plus and Strontium Boost – we guarantee you will
+                                see increased bone density in EVERY follow-up bone scan you have while using these 2 products
+                                - or we will refund every penny you paid for our products between your scans. This guarantee
+                                extends to every scan you have for the next 7 years. Also, if you are unsatisfied at anytime
+                                you can return my product for a full refund, no questions asked!
+                                <!-- Button trigger modal -->
+                                <a href="#" data-toggle="modal" data-target="#exampleModalLong">Click here for details</a>
+                            </div>
+                            <div class="text-center mt-3">
+                                <img src="assets/dean-neuls.jpg" class="img-fluid" alt="image of Dean Neuls the CEO">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 col-sm-4 seen">
+                <div class="card rounded-0 shadow mt-5">
+                    <div class="card-header as-seen-header border-0">
+                        <h2 class="text-center">As Seen On:</h2>
+                    </div>
+                    <div class="card-body as-seen">
+                        <ul class="as-seen-partners">
+                            <li><img src="assets/oz.png"></li>
+                            <li><img src="assets/fox-news.png"></li>
+                            <li><img src="assets/pbs.png"></li>
+                            <li><img src="assets/amazon.png"></li>
+                            <li><img src="assets/forever-young.png"></li>
+                            <li><img src="assets/your-bones.png"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+        
+            <div class="col-sm-4 sci-refs mt-5">
+                <h2 class="text-center">Scientific References</h2>
+                <ol>
+                    <li>Marques A, Ferreira RJ, Santos E, et al. The accuracy of osteoporotic fracture risk prediction tools: a systematic review and meta-analysis. Ann Rheum Dis. 2015 Nov;74(11):1958-67.<br>doi:<br>10.1136/annrheumdis-2015-207907. Epub 2015 Aug 6. PMID: 26248637,</li>
+                    <li>Riggs BL, Melton LJ 3rd. The worldwide problem of osteoporosis: insights afforded by epidemiology. Bone. 1995 Nov;17(5 Suppl):505S-511S. PMID:8573428</li>
+                    <li>https://www.algaecal.com/expert-insights/prescription-drugs-that-cause-osteoporosis/</li>
+                </ol>
+                <p><a href="#">View Full References List...</a></p>
+                <div class="text-center">
+                        <img src="assets/seal.png" class="seal-img img-fluid" alt="7 year guarantee seal">
+                        <button class="btn atc-btn mt-3 mb-3">Buy Now</button>
+                    </div>
+            </div>
+        
+        
+        
+        </div> <!-- end of row -->
+
+        
+        
+        <div class="row">
+                <div class="col-md-12 col-sm-4 text-center footer mt-4">
+                        <img src="assets/logo.jpg" class="img-fluid mb-3" />
+                    <ul class="footer-nav">
+                        <li><a href="#">Shipping &amp; Returns</a> |</li>
+                        <li><a href="#">Health Disclaimer</a> |</li>
+                        <li><a href="#">Legal and Privacy Policy</a> |</li>
+                        <li><a href="#">Contact</a> |</li>
+                        <li><a href="#">Order Now</a></li>
+                    </ul>
+                    <p class="copyright">Copyright &copy; 2017 AlgaeCal</p>
+                </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">7 Year Guarantee</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div id="long" class="modal-body">
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
 
 
 
-        <script src="/js/scripts.js"></script>
-        <script src="/js/timeformatter.js"></script>
-        <script src="/js/jquery.min.js"></script>
-        <script src="/js/tether.min.js"></script>
-        <script src="/js/bootstrap.min.js"></script>
-    </body>
+
+
+
+
+
+
+        
+    </div><!-- eof main container -->
+    <script src="js/wista.js"></script>
+    <script src="/js/scripts.js"></script>
+    <script src="/js/timeformatter.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/tether.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</body>
 </html>

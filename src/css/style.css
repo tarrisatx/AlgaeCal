@@ -69,7 +69,7 @@ p span:nth-child(2) {
   font-size: 1.3em;
   line-height: 1.25em;
   font-weight: 400;
-  padding: 15px 0 15px 0; }
+  padding: 14px 0 15px 0; }
 
 .remove-padding {
   padding-right: 0px;
@@ -78,19 +78,38 @@ p span:nth-child(2) {
 .percentage-off-bg {
   position: absolute;
   right: -35px;
-  top: -45px;
+  top: -37px;
   background: url(../assets/percentage.png) center;
   background-repeat: no-repeat;
-  width: 84px;
-  height: 84px;
-  padding: 25px 0;
+  width: 76px;
+  height: 76px;
+  padding: 23px 0;
   color: #ffffff;
-  font-weight: 700; }
+  font-weight: 700;
+  background-size: 76px 76px; }
   .percentage-off-bg .percent {
     color: #ffffff;
     display: block;
-    font-size: 1.375em;
-    line-height: .85em; }
+    font-size: 1.155em;
+    line-height: .75em; }
+
+.percentage-off-mp-bg {
+  position: absolute;
+  right: -35px;
+  top: -55px;
+  background: url(../assets/percentage.png) center;
+  background-repeat: no-repeat;
+  width: 76px;
+  height: 76px;
+  padding: 23px 15px 0 15px;
+  color: #ffffff;
+  font-weight: 700;
+  background-size: 76px 76px; }
+  .percentage-off-mp-bg .percent-mp {
+    color: #ffffff;
+    display: block;
+    font-size: 1.155em;
+    line-height: .75em; }
 
 .currency:before {
   content: '\0024';
@@ -157,7 +176,7 @@ p span:nth-child(2) {
     letter-spacing: 2px; }
 
 .green-bg {
-  background-color: green;
+  background: url(../assets/leaf-table-bg.png) center;
   padding: 20px 20px 20px 20px; }
 
 .wp-image-62567 {
@@ -165,6 +184,12 @@ p span:nth-child(2) {
   height: auto; }
 
 /* Supplement facts */
+.supplement-facts span {
+  font-size: 1em; }
+
+.supplement-facts td > p {
+  margin-bottom: 1rem; }
+
 .supplement-facts {
   color: #000;
   border: 3px solid;
@@ -193,3 +218,60 @@ p span:nth-child(2) {
 
 .supplement-facts .extra-info td {
   border-top: 16px solid; }
+
+#title {
+  color: #e47832;
+  text-transform: capitalize;
+  word-break: break-all;
+  font-size: 1.7em; }
+
+/* As seen */
+.seen .card {
+  border: none; }
+
+.as-seen-header {
+  padding: 0.30rem 1.25rem;
+  color: #ffffff;
+  background: #4c813d; }
+
+.as-seen {
+  flex: 1 1 auto;
+  padding: .50rem; }
+  .as-seen ul {
+    padding-left: 0px;
+    margin-top: 0.50em;
+    margin-bottom: 0rem; }
+  .as-seen li {
+    vertical-align: top;
+    display: inline;
+    padding: 8px; }
+    .as-seen li img {
+      margin-bottom: 20px; }
+
+div:nth-child(4) > div:nth-child(4) > div > div.card-body.as-seen > ul > li:nth-child(5) {
+  padding: 10px; }
+
+.seen .as-seen-header {
+  border-radius: 0; }
+
+.sci-refs h2 {
+  color: #008ba4; }
+
+.sci-refs ol {
+  padding: 10px 65px 10px 65px; }
+
+.sci-refs p {
+  text-align: center; }
+  .sci-refs p a {
+    text-decoration: underline; }
+
+.footer .footer-nav {
+  padding: 0px; }
+
+.footer li {
+  vertical-align: top;
+  display: inline;
+  padding: 8px 0 8px 0; }
+  .footer li a {
+    color: #848484;
+    text-decoration: none; }
