@@ -1,6 +1,7 @@
-var request = new XMLHttpRequest();
-request.open('GET', 'https://www.algaecal.com/wp-json/acf/v3/options/options', true);
-request.onload = function () {
+    //Request a new XMLHttpRequest to open a connection using GET on the endpoint url below.
+    var request = new XMLHttpRequest();
+    request.open('GET', 'https://www.algaecal.com/wp-json/acf/v3/options/options', true);
+    request.onload = function () {
 
     // Access JSON data
     var data = JSON.parse(this.response);

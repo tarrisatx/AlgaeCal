@@ -11,28 +11,32 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+        <nav class='navbar navbar-toggleable-xl mx-auto sticky-top' style="background: #ffffff;">
+                <div class="container">
+                        <div class="row">
+                                <div class="col-md-12">
+                                    <img src="assets/logo.jpg" class="img-fluid" />
+                                </div>
+                                <div class="col-md-12">
+                                    <p>
+                                        <span>Tap to Talk</span>
+                                        <span id="phoneNum"></span>
+                                    </p>
+                                    <div id="available">
+                                        <img src="assets/phone-icon.png" class="img-valign" />
+                                        <span class="talk">Speak to our Bone Health Specialists!</span>
+                                    </div>
+                                </div>
+                            </div>
+                </div>
+        </nav>
+
     <div class="container">
         <div class="row">
-            <div class="col-sm-12">
-                <img src="assets/logo.jpg" class="img-fluid" />
+            <div class="col-md-6 green-banner">
+                
             </div>
-            <div class="col-sm-6">
-                <p>
-                    <span>Tap to Talk</span>
-                    <span id="phoneNum"></span>
-                </p>
-                <div id="available">
-                    <img src="assets/phone-icon.png" class="img-valign" />
-                    <span class="talk">Speak to our Bone Health Specialists!</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-6 remove-padding">
-                <img src="assets/green-bg.png" class="img-fluid">
-            </div>
-            <div class="col-sm-6 video">
+            <div class="col-md-6 video">
                 <p>Build
                     <strong>brand new bone</strong> WITHIN 6
                     <br> MONTHS with this
@@ -67,7 +71,7 @@
         </div>
 
         <div id="promos" class="row">
-            <div class="col-sm-4 mt-5 pl-5 pr-5 supply">
+            <div class="col-md-4 mt-5 pl-5 pr-5 supply">
                 <div class="card mb-4 rounded-0 shadow">
                     <div class="card-header bg-transparent text-center border-0">
                         <div class="percentage-off-bg">
@@ -87,20 +91,20 @@
                         </div>
                         <div class="mb-3">
                             <img src="assets/seal.png" class="seal-img img-fluid" alt="7 year guarantee seal">
-                            <button class="btn atc-btn mt-3">Add to Cart</button>
+                            <a href="https://www.algaecal.com/product/bone-builder-packs/" class="btn atc-btn mt-3">Add to Cart</a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-sm-4 mt-5 pl-5 pr-5 supply">
+            <div class="col-md-4 mt-5 pl-5 pr-5 supply">
 
                 <div class="blue-bg">
                     <div class="blue-header">MOST POPULAR</div>
                     <div class="card rounded-0 shadow">
                         <div class="card-header bg-transparent text-center border-0">
-                            <div class="percentage-off-bg">
-                                <span class="percent">35%</span>OFF</div>
+                            <div class="percentage-off-mp-bg">
+                                <span class="percent-mp">35%</span>OFF</div>
                             <h2>6 Month Supply</h2>
                             <h3>8 AlgaeCal Plus</h3>
                             <h3>6 Strontium Boost</h3>
@@ -116,13 +120,13 @@
                             </div>
                             <div class="mb-3">
                                 <img src="assets/seal.png" class="seal-img img-fluid" alt="7 year guarantee seal">
-                                <button class="btn atc-btn mt-3">Add to Cart</button>
+                                <a href="https://www.algaecal.com/product/bone-builder-packs/" class="btn atc-btn mt-3">Add to Cart</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-4 mt-5 pl-5 pr-5 supply">
+            <div class="col-md-4 mt-5 pl-5 pr-5 supply">
                 <div class="card mb-4 rounded-0 shadow">
                     <div class="card-header bg-transparent text-center border-0">
                         <div class="percentage-off-bg">
@@ -142,7 +146,7 @@
                         </div>
                         <div class="mb-3">
                             <img src="assets/seal.png" class="seal-img img-fluid" alt="7 year guarantee seal">
-                            <button class="btn atc-btn mt-3">Add to Cart</button>
+                            <a href="https://www.algaecal.com/product/bone-builder-packs/" class="btn atc-btn mt-3">Add to Cart</a>
                         </div>
                     </div>
                 </div>
@@ -150,7 +154,7 @@
         </div>
 
         <div class="row">
-            <div class="col-sm-4 order-md-12">
+            <div class="col-md-4 d-md-none">
                 <h2 class="text-center mt-3 mb-3">AlgaeCal Plus</h2>
                 <!--Begin table 1 -->
                 <div class="supplement-facts">
@@ -237,7 +241,7 @@
                 <!--End table 1 -->
             </div>
 
-            <div class="col-sm-4 mb-3 order-sm-1">
+            <div class="col-md-4 mb-3 d-md-none">
                 <h2 class="text-center mt-3 mb-3">Strontium Boost</h2>
                 <!--Begin table 2 -->
                 <div class="supplement-facts">
@@ -281,7 +285,7 @@
             </div>
 
             <!--7 year guarantee section-->
-            <div class="col-md-12 col-sm-4">
+            <div class="col-md-12">
                 <div class="green-bg">
                     <div class="card rounded-0 shadow">
                         <div class="card-header bg-transparent text-center border-0">
@@ -306,7 +310,7 @@
                 </div>
             </div>
 
-            <div class="col-md-12 col-sm-4 seen">
+            <div class="col-sm-12 col-md-12 seen">
                 <div class="card rounded-0 shadow mt-5">
                     <div class="card-header as-seen-header border-0">
                         <h2 class="text-center">As Seen On:</h2>
@@ -325,7 +329,7 @@
             </div>
             
         
-            <div class="col-sm-4 sci-refs mt-5">
+            <div class="col-sm-12 col-sm-4 d-md-none sci-refs mt-5">
                 <h2 class="text-center">Scientific References</h2>
                 <ol>
                     <li>Marques A, Ferreira RJ, Santos E, et al. The accuracy of osteoporotic fracture risk prediction tools: a systematic review and meta-analysis. Ann Rheum Dis. 2015 Nov;74(11):1958-67.<br>doi:<br>10.1136/annrheumdis-2015-207907. Epub 2015 Aug 6. PMID: 26248637,</li>
@@ -335,18 +339,15 @@
                 <p><a href="#">View Full References List...</a></p>
                 <div class="text-center">
                         <img src="assets/seal.png" class="seal-img img-fluid" alt="7 year guarantee seal">
-                        <button class="btn atc-btn mt-3 mb-3">Buy Now</button>
+                        <a href="https://www.algaecal.com/product/bone-builder-packs/" class="btn atc-btn mt-3">Add to Cart</a>
                     </div>
-            </div>
+            </div>        
         
         
-        
-        </div> <!-- end of row -->
-
-        
+        </div> <!-- end of row -->       
         
         <div class="row">
-                <div class="col-md-12 col-sm-4 text-center footer mt-4">
+                <div class="col-sm-12 col-md-12 col-sm-4 text-center footer mt-4">
                         <img src="assets/logo.jpg" class="img-fluid mb-3" />
                     <ul class="footer-nav">
                         <li><a href="#">Shipping &amp; Returns</a> |</li>
@@ -359,20 +360,7 @@
                 </div>
         </div>
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+       
         <!-- Modal -->
         <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -393,17 +381,7 @@
             </div>
         </div>
 
-        
 
-
-
-
-
-
-
-
-
-        
     </div><!-- eof main container -->
     <script src="js/wista.js"></script>
     <script src="/js/scripts.js"></script>

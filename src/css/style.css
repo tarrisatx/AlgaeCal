@@ -65,6 +65,13 @@ p span:nth-child(2) {
   font-size: 16px;
   font-weight: 500; }
 
+.green-banner {
+  background: url(../assets/intro-bg.jpg) no-repeat;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain; }
+
 .video p {
   font-size: 1.3em;
   line-height: 1.25em;
@@ -275,3 +282,23 @@ div:nth-child(4) > div:nth-child(4) > div > div.card-body.as-seen > ul > li:nth-
   .footer li a {
     color: #848484;
     text-decoration: none; }
+
+@media (min-width: 1200px) {
+  .green-bg, #promos {
+    margin-top: 20px; }
+  .seen {
+    text-align: center; } }
+
+@media (min-width: 991px) {
+  .video p {
+    padding: 14px 0 0px 0; } }
+
+@media (min-width: 768px) and (max-width: 990px) {
+  .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%; }
+  .video p {
+    font-size: 1.125em;
+    line-height: 1.25em;
+    font-weight: 400;
+    padding: 0px 0 0px 0; } }
